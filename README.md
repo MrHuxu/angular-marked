@@ -63,6 +63,7 @@ Add a callback, the argument should be a function of paren scope.
 ```html
   <div marked="my_markdown" callback='parentCallback()'>
   </div>
+  <!-- Use $scope.parentCallback() -->
 ```
 
 ### As a service
