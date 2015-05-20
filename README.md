@@ -58,6 +58,13 @@ Include a markdown file:
 	<!-- Uses markdown content from README.md -->
 ```
 
+Add a callback, the argument should be a function of paren scope.
+
+```html
+  <div marked="my_markdown" callback='parentCallback()'>
+  </div>
+```
+
 ### As a service
 
 ```js

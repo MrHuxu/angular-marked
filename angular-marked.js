@@ -233,13 +233,17 @@
       replace: true,
       scope: {
         opts: '=',
-        marked: '='
+        marked: '=',
+        callback: '&'
       },
       link: function (scope, element, attrs) {
         set(scope.marked || element.text() || '');
 
         function set(val) {
           element.html(marked(val || '', scope.opts || null));
+          if (val) {
+            scope.callback();
+          }
         }
 
         if (attrs.marked) {
